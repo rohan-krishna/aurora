@@ -1,0 +1,19 @@
+{
+    "name": "bluehexagon/aurora",
+    "type": "library",
+    "require": {
+        "spatie/laravel-permission": "^2.37"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rohan Krishna",
+            "email": "rohan@bluehexagon.in"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "bluehexagon\\aurora\\": "src/"
+        }
+    }
+}
