@@ -1,3 +1,7 @@
+@extends('aurora::master')
+
+@section('content')
+
 <h3>Users List</h3>
 
 <ul>
@@ -7,3 +11,5 @@
     </li>
     @endforeach
 </ul>
+
+@endsection
