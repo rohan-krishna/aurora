@@ -5,5 +5,9 @@ Route::get('contact', function() {
 });
 
 Route::group(['namespace' => 'bluehexagon\aurora\Http\Controllers', 'middleware' => ['web']], function() {
-    Route::get('users','AuroraController@index');
+    
+    Route::prefix('users')->middleware('auth')->group(function() {
+        Route::get('/','AuroraController@index')->name('auroraUsersIndex');
+    });
+    
 });
