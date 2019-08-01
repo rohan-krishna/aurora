@@ -8,6 +8,13 @@ Route::group(['namespace' => 'bluehexagon\aurora\Http\Controllers', 'middleware'
     
     Route::prefix('users')->middleware('auth')->group(function() {
         Route::get('/','AuroraController@index')->name('auroraUsersIndex');
+
+        Route::get('edit/{user}','AuroraController@edit')->name('auroraUserEdit');
+        
+        Route::get('delete/{user}','AuroraController@delete')->name('auroraUserDelete');
+        
+        Route::get('create','AuroraController@create')->name('auroraUserCreate');
     });
     
+
 });

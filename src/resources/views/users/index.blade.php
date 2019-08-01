@@ -28,7 +28,10 @@
                             <td>{{ $loop->index+1 }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
-                            <td></td>
+                            <td>
+                                <a href="{{ route('auroraUserEdit',['user' => $user->id]) }}" class="btn btn-info">Edit User</a>
+                                <a href="{{ route('auroraUserDelete',['user' => $user->id]) }}" class="btn btn-danger">Delete User</a>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
